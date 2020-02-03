@@ -41,18 +41,23 @@ interesting to see whether it can generate meaningful query suggestions for all 
 of information needs or whether the specificity of Bhatia, Majumdar, and Mitra
 2011’s data is crucial to its success.
 
+## Running the project
+The query suggestion program needs n-gram data to run. There are two possibilities
+to get this data:
+
+* Download it from [my Dropbox](https://www.dropbox.com/sh/uuoq0x357qu79ji/AACtxRqETVsxncticMHICvNba)
+  (~850 MB unzipped), place the files in _src/main/resources_ (on the same level as
+  _stop.txt_) and skip the preprocessing part, or
+* generate it using the preprocessing classes, as outlined below.
+
 ## Preprocessing
 
-The `Main` class can be run out of the box, because the necessary n-gram data is already
-available under _src/main/resources_. If you wish to run the preprocessing yourself,
-do the following:
+If you wish to run the preprocessing yourself, do the following:
 
 1. Download the tagged version of the English Wikicorpus from the
-   [Wikicorpus website](http://www.cs.upc.edu/~nlp/wikicorpus/)
-
+   [Wikicorpus website](http://www.cs.upc.edu/~nlp/wikicorpus/).
 2. Run `WikicorpusPreprocessor` with the following arguments:
    `<folder with Wikicorpus files> <folder in which to place processed files>`
-	
 3. Run `Trainer` with the following arguments:
    `-in <folder with processed Wikicorpus> -out src/main/resources/
     -from 1 -to 3 -stop src/main/resources/stop.txt`
