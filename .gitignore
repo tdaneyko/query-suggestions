@@ -1,4 +1,10 @@
 .idea/
 *.iml
 target/
+
 traindata
+src/main/resources/docsets
+src/main/resources/wordIDs
+src/main/resources/ngrams-1
+src/main/resources/ngrams-2
+src/main/resources/ngrams-3
